@@ -104,7 +104,7 @@ html, body { width:100%; height:100%; background:#0a0f1e; font-family:Arial,sans
   <div class="scene" id="s2">
     <div class="inner">
       <span class="ck eye">The problem & the opportunity</span>
-      <span class="ck h2">The travel industry moves<br><span class="cyan">$1.9 trillion a year</span></span>
+      <span class="ck h2">The travel industry moves<br><span class="cyan">worldwide</span></span>
       <span class="ck body">But the connection between agency and traveler breaks the moment the booking is confirmed</span>
       <span class="ck body">No engagement. No upsell. No loyalty</span>
       <div class="stats-row">
@@ -113,7 +113,7 @@ html, body { width:100%; height:100%; background:#0a0f1e; font-family:Arial,sans
           <div class="stat-label">Touchpoints after booking — in the current model</div>
         </div>
         <div class="stat ci">
-          <div class="stat-num">$1.9T</div>
+          <div class="stat-num"></div>
           <div class="stat-label">Annual travel industry revenue — with almost no digital engagement layer</div>
         </div>
         <div class="stat ci">
@@ -159,7 +159,7 @@ html, body { width:100%; height:100%; background:#0a0f1e; font-family:Arial,sans
           <div class="rev-desc">Cost scales at only 0.5% per 100k users — this is a high-margin model</div>
         </div>
       </div>
-      <span class="ck body" style="margin-top:2vh;">Break-even at <strong class="white">~385,000 users</strong> — projected <span class="cyan">autumn 2026</span></span>
+      <span class="ck body" style="margin-top:2vh;">Break-even at <strong class="white">~80,000 users</strong> — projected <span class="cyan">autumn 2026</span></span>
     </div>
   </div>
 
@@ -181,17 +181,17 @@ html, body { width:100%; height:100%; background:#0a0f1e; font-family:Arial,sans
       <span class="ck eye">The ask</span>
       <span class="ck h2">We have the product<br>The contracts. The markets<br><span class="cyan">We need the fuel to scale</span></span>
       <div class="ask-box ck">
-        <span class="body" style="margin:0;">We are raising <strong class="white">40M ISK</strong> to fund continued development and integrations with major booking systems — and to reach stable revenue by autumn 2026</span>
+        <span class="body" style="margin:0;">We are raising <strong class="white">20M ISK</strong> to fund continued development and integrations with major booking systems — and to reach stable revenue by autumn 2026</span>
         <div class="ask-row">
           <div class="ask-opt ci">
             <div class="ask-opt-label">Option A</div>
             <div class="ask-opt-val">Subordinated loan</div>
-            <div class="ask-opt-desc">40M ISK — repaid when revenue stabilizes</div>
+            <div class="ask-opt-desc">20M ISK — repaid when revenue stabilizes</div>
           </div>
           <div class="ask-opt preferred ci">
             <div class="ask-opt-label">Option B</div>
             <div class="ask-opt-val">10% equity</div>
-            <div class="ask-opt-desc">40M ISK — join us as BYRD scales globally</div>
+            <div class="ask-opt-desc">20M ISK — join us as BYRD scales globally</div>
           </div>
         </div>
       </div>
@@ -220,7 +220,7 @@ html, body { width:100%; height:100%; background:#0a0f1e; font-family:Arial,sans
       <span class="ck h1">Not the future of travel</span>
       <span class="ck h1 cyan">What travel needs right now</span>
       <div class="cbox ck">
-        <span class="body" style="margin:0;color:#f0ede6;">today@byrd.is &nbsp;·&nbsp; +354 824 5050 &nbsp;·&nbsp; <span class="cyan">byrd.is</span></span>
+        <span class="body" style="margin:0;color:#f0ede6;">today@byrd.is &nbsp;·&nbsp;  &nbsp;·&nbsp; <span class="cyan">byrd.is</span></span>
       </div>
       <span class="ck" style="display:block;margin-top:2vh;font-family:Arial;font-size:13px;color:#556677;letter-spacing:3px;">Confidential — For investor use only</span>
     </div>
@@ -275,9 +275,7 @@ document.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key===' '){e.
 let tx=0,ty=0;
 document.addEventListener('touchstart',e=>{tx=e.touches[0].clientX;ty=e.touches[0].clientY;},{passive:true});
 document.addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-tx,dy=e.changedTouches[0].clientY-ty;if(Math.abs(dy)>Math.abs(dx)&&Math.abs(dy)>40){if(dy<0)advance();else goBack();}else if(Math.abs(dx)>40){if(dx<0)advance();else goBack();}},{passive:true});
-allSteps[0].forEach((el,i)=>{setTimeout(()=>el.classList.add('in'),100+i*200);});
-prog[0]=allSteps[0].length-1;
-updateUI();
+prog[0]++;reveal(0,0);updateUI();
 
 
 </script>
